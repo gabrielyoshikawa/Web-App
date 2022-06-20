@@ -1,0 +1,504 @@
+import processing.video.*;
+Movie myMovietokyo;
+Movie myMoviewuhan;
+Movie myMovieoslo;
+Movie myMoviemadagascar;
+Movie myMovieitalia;
+Movie myMovieaustralia;
+
+PImage bandeirajapao,bandeirachina,bandeiranoruega,bandeiramadagascar,bandeiraitalia,bandeiraaustralia,torrepiza,lakehillier,montefuji,sensoji,
+castelohimeji,bluemontains, greatbarrier,sanjusangendo,zhangjiajie,preikestolen1,bemahara, pucpr,panjinbeach,
+muralhachina,cidadeproibida,sogn,lofotenI,fjordsbergen,baobabs,anbodifotatra,antsiranana,basilicadesaomarcos,lagodecomo,anfiteatroflaviano,parquemarinho,praiabondi;
+int svar = 1;
+boolean mouseClick = false;
+
+void setup(){
+  size(800,800);
+  bandeirajapao = loadImage("data/bandeirajapao.jpeg");
+  bandeiranoruega = loadImage("data/bandeiranoruega.jpeg");
+  bandeirachina = loadImage("data/bandeirachina.jpeg");
+  bandeiramadagascar = loadImage("data/bandeiramadagascar.jpeg");
+  bandeiraitalia = loadImage("data/bandeiraitalia.jpeg");
+  bandeiraaustralia = loadImage("data/bandeiraaustralia.jpeg");
+  bluemontains = loadImage("data/bluemontains.jpeg");
+  greatbarrier = loadImage("data/greatbarrier.jpeg");
+  pucpr = loadImage("data/pucpr.jpeg");
+  sanjusangendo = loadImage("data/sanjusangendo.jpg");
+  zhangjiajie = loadImage("data/zhangjiajie.jpg");
+  preikestolen1 = loadImage("data/preikestolen1.jpg");
+  sensoji = loadImage("data/sensoji.jpeg");
+  castelohimeji = loadImage("data/castelohimeji.jpeg");
+  bemahara = loadImage("data/bemahara.jpeg");
+  torrepiza = loadImage("data/torrepiza.jpeg");
+  montefuji = loadImage("data/montefuji.jpeg");
+  lakehillier = loadImage("data/lakehillier.jpeg");
+  panjinbeach = loadImage("data/panjinbeach.jpeg");
+  muralhachina = loadImage("data/muralhachina.jpeg");
+  cidadeproibida = loadImage("data/cidadeproibida.jpeg");
+  sogn = loadImage("data/sogn.jpeg");
+  lofotenI = loadImage("data/lofotenI.jpeg");
+  fjordsbergen = loadImage("data/fjordsbergen.jpeg");
+  baobabs = loadImage("data/baobabs.jpeg");
+  anbodifotatra = loadImage("data/anbodifotatra.jpeg");
+  antsiranana = loadImage("data/antsiranana.jpeg");
+  basilicadesaomarcos = loadImage("data/basilicadesaomarcos.jpeg");
+  lagodecomo = loadImage("data/lagodecomo.jpeg");
+  anfiteatroflaviano = loadImage("data/anfiteatroflaviano.jpeg");
+  parquemarinho = loadImage("data/parquemarinho.jpeg");
+  praiabondi = loadImage("data/praiabondi.jpeg");
+  background(pucpr);
+  image(bandeirajapao,100,760);
+  image(bandeirachina,200,760);
+  image(bandeiranoruega,300,760);
+  image(bandeiramadagascar,400,760);
+  image(bandeiraitalia,500,760);
+  image(bandeiraaustralia,600,760);
+  myMovietokyo = new Movie(this, "C:/Users/Alunopuc/Documents/Processing/sketch_220509a/data/tokyo.mp4");
+  myMoviewuhan = new Movie(this, "C:/Users/Alunopuc/Documents/Processing/sketch_220509a/data/wuhan.mp4");
+  myMovieoslo = new Movie(this, "C:/Users/Alunopuc/Documents/Processing/sketch_220509a/data/oslo.mp4");
+  myMoviemadagascar = new Movie(this, "C:/Users/Alunopuc/Documents/Processing/sketch_220509a/data/madagascar.mp4");
+  myMovieitalia = new Movie(this, "C:/Users/Alunopuc/Documents/Processing/sketch_220509a/data/italia.mp4");
+  myMovieaustralia = new Movie(this, "C:/Users/Alunopuc/Documents/Processing/sketch_220509a/data/australia.mp4");
+}
+
+void movieEvent(Movie myMovie) {
+  myMovie.read();
+}
+void draw(){
+  //TELA INICIAL
+  if (svar==1) tela1();
+  if (svar==2) tela2();
+  if (svar==3) tela3();
+  if (svar==4) tela4();
+  if (svar==5) tela5();
+  if (svar==6) tela6();
+  if (svar==7) tela7();
+  if (svar==8) tela8();
+  //JAPAO
+  if (svar==21) tela21(); 
+  if (svar==22) tela22(); 
+  if (svar==23) tela23(); 
+  if (svar==24) tela24(); 
+  //CHINA
+  if (svar==31) tela31();
+  if (svar==32) tela32();
+  if (svar==33) tela33();
+  if (svar==34) tela34();
+  //NORUEGA
+  if (svar==41) tela41();
+  if (svar==42) tela42();
+  if (svar==43) tela43();
+  if (svar==44) tela44();
+  //MADAGASCAR
+  if (svar==51) tela51();
+  if (svar==52) tela52();
+  if (svar==53) tela53();
+  if (svar==54) tela54();
+  //ITALIA
+  if (svar==61) tela61();
+  if (svar==62) tela62();
+  if (svar==63) tela63();
+  if (svar==64) tela64();
+  //AUSTRALIA  
+  if (svar==71) tela71();
+  if (svar==72) tela72();
+  if (svar==73) tela73();
+  if (svar==74) tela74();
+  //CREDITOS
+  if (svar==81) tela81();
+  if (svar==82) tela82();
+  
+  println(svar);
+  
+  image(myMovietokyo, 40,175);
+  image(myMoviewuhan, 40,175);
+  image(myMovieoslo, 40,175);
+  image(myMoviemadagascar, 40,175);
+  image(myMovieitalia,40,175);
+  image(myMovieaustralia,40,175);
+}
+
+void tela1(){
+  background(pucpr);
+  image(bandeirajapao,100,740);
+  image(bandeirachina,200,740);
+  image(bandeiranoruega,300,740);
+  image(bandeiramadagascar,400,740);
+  image(bandeiraitalia,500,740);
+  image(bandeiraaustralia,600,740);
+  fill(255); rect(700,740,100,100);   fill(0);   text("Créditos",730,780);
+  if(mousePressed) {
+    if((mouseX>100)&&(mouseX<200)&&(mouseY>760)) svar=2;
+    if((mouseX>200)&&(mouseX<300)&&(mouseY>760)) svar=3;
+    if((mouseX>300)&&(mouseX<400)&&(mouseY>760)) svar=4;
+    if((mouseX>400)&&(mouseX<500)&&(mouseY>760)) svar=5;
+    if((mouseX>500)&&(mouseX<600)&&(mouseY>760)) svar=6;
+    if((mouseX>600)&&(mouseX<700)&&(mouseY>760)) svar=7;
+    if((mouseX>700)&&(mouseX<800)&&(mouseY>760)) svar=8;
+  }
+}
+void tela2(){ // JAPAO
+  fill(255);     rect(0,0,width, height); fill(0);   text("Sanjusangendo, Kyoto",350,100);
+  image(sanjusangendo, 40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=21;  
+  }  
+}
+void tela3(){ // CHINA
+  fill(255);     rect(0,0,width, height); fill(0);   text("Zhangjiajie, Hunan",350,100);
+  image(zhangjiajie,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=31;   
+  }
+}
+void tela4(){ // NORUEGA
+  fill(255);     rect(0,0,width, height); fill(0);   text("Preikestolen, Forsand",350,100);
+  image(preikestolen1,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=41;  
+    }  
+}
+void tela5(){ // MADAGASCAR
+  fill(255);     rect(0,0,width, height); fill(0);   text("Tsingy de Bemaraha, Morondava",350,100);
+  image(bemahara,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=51;  
+    }  
+}
+void tela6(){ // ITALIA
+  fill(255);     rect(0,0,width, height); fill(0);   text("Torre de Pisa, Pisa",350,100);
+  image(torrepiza,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=61;  
+    }  
+}
+void tela7(){ // AUSTRALIA
+  fill(255);     rect(0,0,width, height); fill(0);   text("Lake hillier, Arquipélago de Recherche",350,100);
+  image(lakehillier,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=71;  
+    }  
+}
+void tela8(){ // CREDITOS
+  fill(255);     rect(0,0,width, height); fill(0);   text("Arthur Przygocki\nGabriel Yoshikawa Koti\nGabriel Yuichi Suzaki\nLuis Felipe de Araujo Francalacci\nXuekai Qian", 380, 400);
+  fill(255);     rect(0,740, 100,100);     fill(0);   text("<<", 50,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    } 
+}
+//JAPAO
+void tela21(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Monte Fuji, Tokyo",350,100);
+  image(montefuji,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=22;  
+    }
+}
+void tela22(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Templo Senso-Ji, Tokyo",350,100);
+  image(sensoji,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=21;
+    if((mouseX>700)&&(mouseY>760)) svar=23;  
+  }
+}
+void tela23(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Castelo Himeji, Hyogo",350,100);
+  image(castelohimeji,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=22;
+    if((mouseX>700)&&(mouseY>760)) svar=24;  
+  }
+}
+void tela24(){
+  myMovietokyo.play();
+  fill(255);     rect(0,0,width, height); fill(0);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=23;
+    if((mouseX>700)&&(mouseY>760)) svar=1;  
+  }  
+}
+//CHINA
+void tela31(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Panjin Beach, Liaoning",350,100);
+  image(panjinbeach,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=3;
+    if((mouseX>700)&&(mouseY>760)) svar=32;  
+  }
+}
+void tela32(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Muralha da China, Pequim",350,100);
+  image(muralhachina,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=31;
+    if((mouseX>700)&&(mouseY>760)) svar=33;  
+  }
+}
+void tela33(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Cidade Proibida, Pequim",350,100);
+  image(cidadeproibida,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=32;
+    if((mouseX>700)&&(mouseY>760)) svar=34;    
+  }
+}
+void tela34(){
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=33;
+    if((mouseX>700)&&(mouseY>760)) svar=1;  
+    myMoviewuhan.play();
+  }
+}
+//NORUEGA
+void tela41(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Fiorde de Sogn, Balestrand",350,100);
+  image(sogn,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=4;
+    if((mouseX>700)&&(mouseY>760)) svar=42;  
+  }
+}
+void tela42(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Lofoten Islands, Nordland",350,100);
+  image(lofotenI,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=41;
+    if((mouseX>700)&&(mouseY>760)) svar=43;   
+  }
+}
+void tela43(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("West Norwegian Fjords, Bergen",350,100);
+  image(fjordsbergen,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=42;
+    if((mouseX>700)&&(mouseY>760)) svar=44;   
+  }
+}
+void tela44(){
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=43;
+    if((mouseX>700)&&(mouseY>760)) svar=1;  
+    myMovieoslo.play();
+  }
+}
+//MADAGASCAR
+void tela51(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Avenue of the Baobabs, Morondava",350,100);
+  image(baobabs,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=52;
+  }
+}
+void tela52(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Ambodifotatra, Nosy Boraha",350,100);
+  image(anbodifotatra,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=51;
+    if((mouseX>700)&&(mouseY>760)) svar=53;
+  }
+}
+void tela53(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Nosy Be, Antsiranana",350,100);
+  image(antsiranana,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=52;
+    if((mouseX>700)&&(mouseY>760)) svar=54;
+  }
+}
+void tela54(){
+  fill(0,255,0);       rect(0,0,width, height); fill(0);   text("MAGASCAR VIDEO", width/2,height/2);;
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=53;
+    if((mouseX>700)&&(mouseY>760)) svar=1;
+     myMoviemadagascar.play();
+  }
+}
+//ITALIA
+void tela61(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Basílica de São Marcos, Veneza",350,100);
+  image(basilicadesaomarcos,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=62;
+  }
+}
+void tela62(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Lago de Como, Lombardia",350,100);
+  image(lagodecomo, 40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=61;
+    if((mouseX>700)&&(mouseY>760)) svar=63;
+  }
+}
+void tela63(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Anfiteatro Flaviano, Roma",350,100);
+  image(anfiteatroflaviano, 40, 175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=62;
+    if((mouseX>700)&&(mouseY>760)) svar=64;
+  }
+}
+void tela64(){
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=63;
+    if((mouseX>700)&&(mouseY>760)) svar=1;  
+    myMovieitalia.play();
+  }
+}
+//AUSTRALIA
+void tela71(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Parque Marinho de Grande Barreira de Corais, Townsville",350,100);
+  image(parquemarinho,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=1;
+    if((mouseX>700)&&(mouseY>760)) svar=72;
+  }
+}
+void tela72(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Blue Mountains National Park, Nova Gales do Sul",350,100);
+  image(bluemontains,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=71;
+    if((mouseX>700)&&(mouseY>760)) svar=73;
+  }
+}
+void tela73(){
+  fill(255);     rect(0,0,width, height); fill(0);   text("Praia de Bondi, New South Wales",350,100);
+  image(praiabondi,40,175);
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=72;
+    if((mouseX>700)&&(mouseY>760)) svar=74;
+  }
+}
+void tela74(){
+  fill(255);     rect(0,740,100,100);     fill(0);   text("<<", 50,780);
+  fill(255);     rect(700,740,100,100);   fill(0);   text(">>",750,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>760)) svar=73;
+    if((mouseX>700)&&(mouseY>760)) svar=1;  
+    myMovieaustralia.play();
+  }
+}
+//CREDITOS
+void tela81(){
+  fill(255);       rect(0,740,100,100);     fill(0);   text("<<",  50,780);
+    if(mouseClick) {
+    mouseClick = false;
+    if((mouseX<100)&&(mouseY>360)) svar=1;
+  }
+}
+void tela82(){
+  fill(0);
+}
+//PAUSAR
+void keyPressed() {
+  if(key==' ')
+  myMovietokyo.stop();
+  myMoviewuhan.stop();
+  myMovieoslo.stop();
+  if(key=='p')
+  myMovietokyo.play();
+  myMoviewuhan.play();
+  myMovieoslo.play(); 
+}  
+void mouseClicked() {
+  mouseClick = true;
+}
